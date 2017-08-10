@@ -1,0 +1,241 @@
+a:hover{text-decoration: none;}
+.g-wrapper {
+    
+}
+
+.g-content{
+    .g-banner{
+        height: 3.06rem;
+        background: url('~@/assets/imgs/banner.png') no-repeat 0 0;
+        background-size: 100%;
+    }
+    .g-view{
+        height: 5.06rem;
+        background: white;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        border-bottom: 1px solid #eaeaea;
+        li{
+            width: 25%;
+            height: 50%;
+        }
+        .g-link{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .icon-wrap{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 1.30rem;
+                height: 1.30rem;
+                background: #ef8399;
+                border-radius: 20px;
+                color: white;
+                i{
+                    font-size: 30px;
+                }
+            }
+            .v-title{
+                padding-top: .1rem;
+            }
+        }
+    }
+    .g-intro-wrap{
+        height: 5.3rem;
+        padding: 0.22rem 0;
+        .g-intro{
+            height: 100%;
+            background: white;
+            box-sizing: border-box;
+            border: 1px solid #eaeaea;
+            display: flex;
+            flex-direction: column;
+            .g-intro-main{
+                flex: 1;
+                box-sizing: border-box;
+                padding: 0.33rem 0;
+                display: flex;
+                li{
+                    flex: 1;
+                    box-sizing: border-box;
+                    border-right: 1px solid #eaeaea;
+                    overflow: hidden;
+                    &:last-child{
+                        border-right: none;
+                    }
+                }
+            }
+            .g-link{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 1.9rem;
+                    height: 1.73rem;
+                }
+                .g-intro-name{
+                    color: #353535;
+                    font-size: 12px;
+                    transform: scale(0.9);
+                    white-space: nowrap;
+                    padding: 0.24rem 0;
+                }
+                .g-intro-price{
+                    color: #ff3b31;
+                    font-size: 15px;
+                }
+            }
+        }
+        
+    }
+    .g-discount{
+        background: white;
+        height: 5.36rem;
+        box-sizing: border-box;
+        border: 1px solid #eaeaea;
+        display: flex;
+        flex-direction: column;
+        .g-discount-main{
+            flex: 1;
+            box-sizing: border-box;
+            padding: 0.21rem 0;
+            display: flex;
+            li{
+                flex: 1;
+                border-right: 1px solid #eaeaea;
+                overflow: hidden;
+                box-sizing: border-box;
+                &:last-child{
+                    border-right: none;
+                }
+            }
+        }
+        .g-dis-lf{
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 0 0.26rem;
+            box-sizing: border-box;
+            .dis-lf-img{
+                height: 2.08rem;
+                display: flex;
+                justify-content: flex-end;
+                img{
+                    width: 3.30rem;
+                    height: 100%;
+                }
+            }
+            .dis-lf-content{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
+        }
+        .g-dis-rt{
+            display: flex;
+            flex-direction: column;
+            .dis-wrap{
+                flex: 1;
+                border-bottom: 1px solid #eaeaea;
+                box-sizing: border-box;
+                padding: 0 0.26rem;
+                display: flex;
+                flex-direction: row-reverse;
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+            .dis-img{
+                width: 1.92rem;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                img{
+                    width: 1.92rem;
+                    height: 1.41rem;
+                }
+            }
+            .dis-content{
+                flex: 1;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+        }
+        .dis-name, .desc{
+            font-size: 14px;
+            color: #353535;
+            overflow: hidden;
+            width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-align: left;
+        }
+        .desc{
+            color: #919191;
+            font-size: 12px;
+            text-align: left;
+        }
+        .price{
+            padding: 0.1rem 0;
+            color: #ff3b31;
+            font-size: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: left;
+            .oldprice{
+                color: #919191;
+                font-size: 12px;
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    .g-title-com{
+        height: 1.2rem;
+        padding-left: 0.26rem;
+        box-sizing: border-box;
+        border-bottom: 1px solid #eaeaea;
+        display: flex;
+        align-items: center;
+        .icon-wrap{
+            width: 0.72rem;
+            height: 0.72rem;
+            border-radius: 5px;
+            background: #fd9d4c;
+            i{
+                font-size: 20px;
+                color: white;
+            }
+        }
+        .g-title{
+            font-size: 16px;
+            padding-left: 0.26rem;
+        }
+        .g-more{
+            flex: 1;
+            overflow: hidden;
+            color: #7a7a7a;
+            font-size: 12px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 0.22rem;
+            box-sizing: border-box;
+            i{
+                font-size: 0.64rem;
+                position: relative;
+                top: -2px;
+            }
+        }
+    }
+}
+
