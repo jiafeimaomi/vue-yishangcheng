@@ -42,9 +42,19 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
   name: 'app',
+  computed:{
+      ...mapGetters(['home/todosDone', 'classify/classifyDone']),
+      getCode(){
+          return 'hello'
+      }
+  },
+
   methods:{
+    ...mapActions(['home/increment']),
     gotoNext(addr){
        if(addr!= undefined){
            this.$router.push(`/${addr}`);
@@ -53,7 +63,18 @@ export default {
        }
     }    
   },
-  mouted(){
+  mounted(){
+     var url=HOST+"/directive/getDirectives";
+     this.$axios(url, {"compId": 1}).then((res)=>{
+        // 请求回调
+     })
+    //发起一个action有以下两种方式：
+    this['home/increment'](30);
+    this.$store.dispatch('classify/increment', 5);
+
+    // 获取store中的状态值, 通过this.$store.state可以获取查看store下的所有数据
+    console.log('$store', this.$store.state)
+
 
   }
 }

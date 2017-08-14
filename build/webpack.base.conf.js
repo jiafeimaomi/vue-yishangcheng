@@ -44,6 +44,9 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        query: {
+          presets: ["stage-3"]
+        },
         include: [resolve('src'), resolve('test')]
       },
       {

@@ -1,10 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import Home from '@/components/Home'
-import Classify from '@/components/Classify'
-import Shopping from '@/components/Shopping'
-import My from '@/components/My'
+import HotTest from '@/components/HotTest'
 
 Vue.use(Router)
 
@@ -13,21 +9,27 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home,
+      component:resolve => require(['@/components/Home'], resolve)
     },{
       path: '/classify',
       name: 'classify',
-      component: Classify
+      component: resolve => require(['@/components/Classify'], resolve)
     },{
       path: '/shopping',
       name: 'shopping',
-      component: Shopping
+      component: resolve => require(['@/components/Shopping'], resolve)
     },
     {
       path: '/my',
       name: 'my',
-      component: My
+      component: resolve => require(['@/components/My'], resolve)
+    },
+    {
+      path: '/hotTest',
+      name: 'hotTest',
+      component: HotTest,
     }
-
-  ]
+  ]   
 })
+
+
